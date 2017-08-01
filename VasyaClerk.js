@@ -43,12 +43,12 @@ function Clerk(name) {
   this.name = name;
   
   this.money = {
-    25 : 0,
-    50 : 0,
+    25: 0,
+    50: 0,
     100: 0 
   };
   
-  this.sell = function(element, index, array) {
+  this.sell = function (element, index, array) {
     this.money[element]++;
 
     switch (element) {
@@ -66,11 +66,11 @@ function Clerk(name) {
   };
 }
 
-function tickets(peopleInLine){
-  var vasya = new Clerk("Vasya");
-  return peopleInLine.every(vasya.sell.bind(vasya)) ? "YES" : "NO";
+function tickets(peopleInLine) {
+  let vasya = new Clerk('Vasya');
+  return peopleInLine.every(vasya.sell.bind(vasya)) ? 'YES' : 'NO';
 }
 
-console.log(tickets([25,25,50,100,25,50,25,100,25,25,25,100,25,25,25,100,25,25,50,100]));
+console.log(tickets([25, 25, 50, 100, 25, 50, 25, 100, 25, 25, 25, 100, 25, 25, 25, 100, 25, 25, 50, 100]));
 // console.log(tickets([25, 25, 50, 50]));
 
